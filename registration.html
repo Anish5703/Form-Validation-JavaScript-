@@ -1,0 +1,81 @@
+<!--  Resgistration Form
+  -Name is required , atleast 8 characters
+  -passsword and confirm password
+  -phone must be 10 digits
+  -email ,must be on email format 
+  -country is required
+  -gender must be selected
+  -should accept terms and condition before submit
+  -disabe submit button until, all these conditions are satisfied
+ -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Side Validation</title>
+    <link rel="stylesheet" href="registration.css">
+  </head>
+  <body>
+    <form  method="post" class="registrationForm" id="myform"  onsubmit="handleSubmit(event)">
+        <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <div class="inner-group">
+        <input type="text" name="fullName" id="fullName" placeholder="Enter Your Name" />
+        <p class="error" id="fullNameErr"></p>
+        </div>
+    </div>
+        <div class="form-group">
+        <label for="password">Password</label>
+        <div class="inner-group">
+        <input type="password" name="password" id="password" placeholder="Enter New Password">
+        <p class="error" id="passwordErr"></p>
+        </div>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="inner-group">
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Your Password">
+            <p class="error" id="confirmPasswordErr"></p>
+        </div>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <div class="inner-group">
+            <input type="text" name="phone" id="phone" placeholder="Enter Your Phone Number">
+            <p class="error" id="phoneErr"></p>
+
+        </div>
+    </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <div class="inner-group">
+            <input type="email" name="email" id="email" placeholder="Enter Your Email">
+            <p class="error" id="emailErr"></p>
+        </div>
+        </div>
+        <div class="form-group">
+            <label for="country">Country</label>
+            <select name="country" id="country">
+                <option value="nepal">Nepal</option>`    
+                <option value="india">India</option>
+                <option value="australia">Australia</option>                       
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="genderGroup">Gender</label>
+            <input type="radio" value="Male" name="genderGroup" id="genderGroup" />Male
+            <input type="radio" value="female" name="genderGroup" id="genderGroup"/>Female
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="term" id="term" />I accept all
+            <a href="#">terms and conditions</a>
+        </div>
+        <div class="button-group" >
+            <button type="submit" id="submit" >Submit</button>
+            <button type="reset" id="reset">Reset</button>
+        </div>
+    </form>
+    <script src="registration.js"></script>
+  </body>
+  </html>
